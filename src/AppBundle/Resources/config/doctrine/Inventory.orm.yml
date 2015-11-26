@@ -1,0 +1,68 @@
+AppBundle\Entity\Inventory:
+    type: entity
+    table: inventory
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        quantityPerUnit:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '1'
+            column: quantity_per_unit
+        unitPrice:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 2
+            options:
+                default: '0.00'
+            column: unit_price
+        unitsInStock:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: units_in_stock
+        unitsOnOrder:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: units_on_order
+        safetyStock:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: safety_stock
+        description:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+        picture:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        nama:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

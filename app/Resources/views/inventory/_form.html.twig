@@ -1,0 +1,51 @@
+{{ form_start(form, { attr: attr|default({}) , 'enctype': "multipart/form-data"}) }}
+
+    <div class="col-xs-5">
+        {{ form_label(form.nama) }}
+        {{ form_widget(form.nama) }}
+        {{ form_errors(form.nama) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.quantityPerUnit) }}
+        {{ form_widget(form.quantityPerUnit) }}
+        {{ form_errors(form.quantityPerUnit) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.unitPrice) }}
+        {{ form_widget(form.unitPrice) }}
+        {{ form_errors(form.unitPrice) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.unitsInStock) }}
+        {{ form_widget(form.unitsInStock) }}
+        {{ form_errors(form.unitsInStock) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.unitsOnOrder) }}
+        {{ form_widget(form.unitsOnOrder) }}
+        {{ form_errors(form.unitsOnOrder) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.safetyStock) }}
+        {{ form_widget(form.safetyStock) }}
+        {{ form_errors(form.safetyStock) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description) }}
+        {{ form_errors(form.description) }}
+    </div>
+    <div class="col-xs-5">
+        {{ form_label(form.file) }}
+        {{ form_widget(form.file) }}
+        {{ form_errors(form.file) }}
+    </div>
+    <div class="col-xs-10">
+        <br>
+        <div style="float:right">
+            {#<button type='submit' name='save' id='save' class='btn btn-primary'><i class='fa fa-plus'></i> {{ button_label }}</button>#}
+            <input type='submit' name='save' value='{{ button_label }}' class='btn btn-primary' >
+        </div>
+    </div>
+
+{{ form_end(form) }}
